@@ -30,6 +30,7 @@ def template(args):
     for f in os.listdir(sample_dir):
         shutil.move(os.path.join(sample_dir, f), currentdir)
     shutil.rmtree(sample_dir)
+    shutil.move(os.path.join(currentdir, 'sample'), os.path.join(currentdir,project))
 
     call('git', 'init')
 
